@@ -1,0 +1,48 @@
+/** @format */
+
+// :root {
+//   font-size: 62.5%;
+// }
+
+// 10px*100 / 16px = 62.5%
+
+$fs-d: (
+  'lc': calc(3rem + 3.5vw),
+  'l': calc(2rem + 3vw),
+  'mc': calc(2rem + 2.5vw),
+  'm': calc(1rem + 2vw),
+  'sc': calc(1rem + 1.5vw),
+  's': calc(1rem + 1vw),
+);
+
+@function fs-d($f-s-d) {
+  @return map-get($fs-d, $f-s-d);
+}
+
+$fs-st: (
+  'lc': 4rem,
+  'l': 3.5rem,
+  'mc': 2.5rem,
+  'm': 2rem,
+  'sc': 1.5rem,
+  's': 1rem,
+  'xs': 0.75rem,
+);
+
+@function fs-st($fs-s-st) {
+  @return map-get($fs-st, $fs-s-st);
+}
+
+$fw: (
+  'thin': 100,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'black-fw': 900,
+);
+
+@function fw($f-w) {
+  @return map-get($fw, $f-w);
+}

@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as c;
+@use '../base/padding' as p;
+@use '../base/typography' as t;
+
+.login-section {
+  display: flex;
+  &_left {
+    flex: 50%;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-green-500), var(--primary-green-900));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../../../../public/assets/img/bg-leaf.svg');
+      width: 100%;
+      height: 100%;
+      background-size: 32%;
+      opacity: 0.1;
+    }
+    &-img {
+      position: relative;
+
+      width: 296px;
+      height: 400px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        box-shadow: var(--primary-green-900) 0px 7px 29px 0px;
+      }
+    }
+  }
+  &_right {
+    flex: 50%;
+    height: 100vh;
+    padding: 3.625rem p.pad-st-h('xl');
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: c.priColors('100');
+    &-img {
+      margin-bottom: 1rem;
+      width: 12rem;
+      height: 8.75rem;
+      align-self: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-input {
+      padding: 0 p.pad-d-h(s);
+      display: flex;
+      flex-direction: column;
+
+      .labels {
+        font-size: t.fs-st(s);
+        font-weight: t.fw(medium);
+        color: c.priColors('500');
+        margin-bottom: 0.35rem;
+      }
+      .link {
+        margin-top: -0.5rem;
+        margin-bottom: 0.45rem;
+        font-size: t.fs-st(xs);
+        font-weight: t.fw(medium);
+        color: c.priColors('500');
+        text-transform: capitalize;
+        border-bottom: 1px solid transparent;
+        border-radius: 0;
+        align-self: flex-end;
+        &:hover {
+          border-bottom: 1px solid c.priColors('500');
+          color: c.priColors('600');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as c;
+@use '../base/padding' as p;
+@use '../base/typography' as t;
+
+input {
+  background-color: #fff;
+  padding: p.pad-st-v('s') p.pad-st-h('x');
+  margin-bottom: 1.25rem;
+  font-size: t.fs-st(s);
+  color: c.priColors('600');
+  border: 1.5px solid transparent;
+  transition: all 0.25s ease-in-out;
+  &:focus {
+    box-shadow: c.priColors('200') 0px 0px 1px 2px;
+    border: 1.5px solid c.priColors('300');
+  }
+}

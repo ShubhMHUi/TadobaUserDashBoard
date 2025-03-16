@@ -1,0 +1,111 @@
+@use 'sass:map';
+
+:root {
+  --primary-green-50: #e8eceb;
+  --primary-green-100: #b7c5c2;
+  --primary-green-200: #95a9a4;
+  --primary-green-300: #64827b;
+  --primary-green-400: #466a61;
+  --primary-green-500: #18453a;
+  --primary-green-600: #163f35;
+  --primary-green-700: #113129;
+  --primary-green-800: #0d2620;
+  --primary-green-900: #0a1d18;
+
+  --secondary-orange-50: #fdf2e8;
+  --secondary-orange-100: #f7d5b7;
+  --secondary-orange-200: #f4c194;
+  --secondary-orange-300: #eea564;
+  --secondary-orange-400: #eb9345;
+  --secondary-orange-500: #e67817;
+  --secondary-orange-600: #d16d15;
+  --secondary-orange-700: #a35510;
+  --secondary-orange-800: #7f420d;
+  --secondary-orange-900: #61320a;
+
+  --surface-green-white-hover: #f3f6f5;
+  --surface-green-white-active: #dae1df;
+  --surface-green-light: #f3f6f5;
+  --surface-green-light-hover: #dae1df;
+  --surface-green-light-active: #c5d1ce;
+  --surface-green-normal: #e8eceb;
+  --surface-green-normal-hover: #ccd6d4;
+  --surface-green-normal-active: #b0c0bc;
+  --surface-green-dark: #dce3e1;
+
+  --surface-orange-white-hover: #fef8f3;
+  --surface-orange-white-active: #fbe9da;
+  --surface-orange-light: #fef8f3;
+  --surface-orange-light-hover: #fbe9da;
+  --surface-orange-light-active: #f9ddc5;
+  --surface-orange-normal: #fdf2e8;
+  --surface-orange-normal-hover: #fae1cc;
+  --surface-orange-normal-active: #f7d1b0;
+  --surface-orange-dark: #fbebdc;
+}
+
+$priColor: (
+  '50': #e8eceb,
+  '100': #b7c5c2,
+  '200': #95a9a4,
+  '300': #64827b,
+  '400': #466a61,
+  '500': #18453a,
+  '600': #163f35,
+  '700': #113129,
+  '800': #0d2620,
+  '900': #0a1d18,
+);
+
+@function priColors($pritheme) {
+  @return map-get($priColor, $pritheme);
+}
+
+$secColors: (
+  '50': #fdf2e8,
+  '100': #f7d5b7,
+  '200': #f4c194,
+  '300': #eea564,
+  '400': #eb9345,
+  '500': #e67817,
+  '600': #d16d15,
+  '700': #a35510,
+  '800': #7f420d,
+  '900': #61320a,
+);
+
+@function secColors($sec-theme) {
+  @return map-get($secColors, $sec-theme);
+}
+
+$surfaceGreen: (
+  'surface-g-white': #f3f6f5,
+  'surface-g-white-active': #dae1df,
+  'surface-g-light': #f3f6f5,
+  'surface-g-light-hover': #dae1df,
+  'surface-g-light-active': #c5d1ce,
+  'surface-g-normal': #e8eceb,
+  'surface-g-normal-hover': #ccd6d4,
+  'surface-g-normal-active': #b0c0bc,
+  'surface-g-dark': #dce3e1,
+);
+
+@function surfaceGreen($surface-Green) {
+  @return map-get($surfaceGreen, $surface-Green);
+}
+
+$surfaceOrange: (
+  'surface-o-white': #fef8f3,
+  'surface-o-white-active': #fbe9da,
+  'surface-o-light': #fef8f3,
+  'surface-o-light-hover': #fbe9da,
+  'surface-o-light-active': #f9ddc5,
+  'surface-o-normal': #fdf2e8,
+  'surface-o-normal-hover': #fae1cc,
+  'surface-o-normal-active': #f7d1b0,
+  'surface-o-dark': #fbebdc,
+);
+
+@function surfaceOrange($surface-Orange) {
+  @return map-get($surfaceOrange, $surfaceOrange);
+}
